@@ -1,0 +1,5 @@
+SELECT  
+  {[Measures].[Sales Amount]} ON COLUMNS, 
+  NON EMPTY  
+  {[Dim Sales Territory].[Sales Territory Country].Members} ON ROWS 
+FROM [AdventureWorksDW_Vista] 

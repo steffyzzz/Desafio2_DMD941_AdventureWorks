@@ -1,0 +1,9 @@
+SELECT  
+  {[Measures].[Sales Amount]} ON COLUMNS, 
+  NON EMPTY  
+  { 
+    [Order Date].[Calendar Year].Members *  
+    [Order Date].[Calendar Quarter].Members * 
+    [Dim Product].[English Product Category Name].Members 
+  } ON ROWS 
+FROM [AdventureWorksDW_Vista]
